@@ -1,6 +1,20 @@
-
-public class Main{
+public class Main {
     public static void main(String[] args) {
-        Woodendoors = new Woodendoors (4, 1,  0.2);
-        Armoreddoors  = new Armoreddoors ( 20, 21, 2);
-        SawdustSlabDoors  = new SawdustSlabDoors ( 5, 3, 0.3);
+        // Створення об'єкта дверей
+        Doors door = new Doors (false, "Wood", 200, 80, "Brown");
+
+        // Виведення інформації про двері
+        System.out.println("Door material: " + door.getMaterial());
+        System.out.println("Door height: " + door.getHeight() + " cm");
+        System.out.println("Door width: " + door.getWidth() + " cm");
+        System.out.println("Door color: " + door.getColor());
+
+        // Відкриття дверей
+        door.open();
+
+        // Закриття дверей
+        door.close();
+    }
+}
+
+
